@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SignUp Form</title>
+  <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="title-text">
+    <div class="title login">SignUp Form</div>
+    
+  </div>
+  <div class="form-container">
+  
+    <div class="form-inner">
+      <form action="/signupSubmit" class="signup" method="POST">
+        <div class="field">
+          <input type="text" placeholder="Email Address" name="email" required>
+        </div>
+        <div class="field">
+          <input type="password" placeholder="Password" name="password" required>
+        </div>
+        <div class="pass-link"><a href="#">Forgot password?</a></div>
+        <div class="field btn">
+          <div class="btn-layer"></div>
+          <input type="submit" value="Login">
+        </div>
+        <div class="signup-link">Already a member <a href="/login">Login now</a></div>
+      </form>
+      
+    </div>
+  </div>
+</div>
+<% if (error) { %>
+  <p class="error-message"><%= error %></p>
+<% } %>
+
+</body>
+</html>
